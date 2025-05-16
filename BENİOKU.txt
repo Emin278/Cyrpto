@@ -1,0 +1,2 @@
+dosyanın dizininden cmd açın sonra şu komudu yazın:
+python png.py/txt.py "şifrelenecek dosyanın adı(uzantısıyla beraber)"
