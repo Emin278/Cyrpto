@@ -10,8 +10,10 @@ def sifrele(dir):
 def sifreCoz(dir):
     password = getpass("Password girin: ")
     bufferSize = 521*1024
-    pyAesCrypt.decryptFile(str(dir),str(dir)+".txt",password,bufferSize)
-    print(f"Dosyanız açıldı: {str(dir)}.txt")
+    # Dosya adından .aes uzantısını çıkarıyoruz
+    output_file = str(dir).replace('.aes', '')
+    pyAesCrypt.decryptFile(str(dir), output_file, password, bufferSize)
+    print(f"Dosyanız açıldı: {output_file}")
     
 dir = argv[1]
 
